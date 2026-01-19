@@ -32,7 +32,7 @@ const ContactRow = ({ contact, index }) => {
           {contact.phone}
         </td>
 
-        <td className="px-4 py-3">
+        <td className="px-4 gap-2.5 flex py-3">
           
             <button
               onClick={() => setShow(true)}
