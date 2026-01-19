@@ -1,0 +1,47 @@
+{
+  "contacts": [
+    {
+      "firstName": "Alfred",
+      "lastName": "Kuhlman",
+      "email": "alfred@test.com",
+      "phone": "+628676565656",
+      "address": "Lorem ipsum dolor",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "firstName": "sa",
+      "lastName": "tanveer",
+      "email": "saa@test.com",
+      "phone": "+628676sf565656",
+      "address": "Lorem ipsum dolor",
+      "createdAt": "2023-02-01"
+    },
+    {
+      "id": "772b",
+      "firstName": "hello",
+      "lastName": "hi",
+      "email": "sdajdj@gmail.com",
+      "phone": "56456464",
+      "address": "adbjkwbjd",
+      "createdAt": "2026-01-19T09:47:47.684Z"
+    },
+    {
+      "firstName": "toggg",
+      "lastName": "my ",
+      "email": "awdajwdjk@gmail.coom",
+      "phone": "54465454451",
+      "address": "wdaKJDBkjhwgdk",
+      "id": "7b11"
+    },
+    {
+      "id": "41c1",
+      "firstName": "adwd",
+      "lastName": "adada",
+      "email": "adada",
+      "phone": "adadada",
+      "address": "adadad",
+      "createdAt": "2026-01-19T17:53:18.283Z"
+    }
+  ]
+}
