@@ -20,7 +20,7 @@ const ShowContactModal = ({ contact, onClose }) => {
           <p><strong>Last Name:</strong> {contact.lastName}</p>
           <p><strong>Email:</strong> {contact.email}</p>
           <p><strong>Phone:</strong> {contact.phone}</p>
-          <p><strong>Address:</strong> {contact.address}</p>
+          
         </div>
 
         <div className="flex justify-center gap-4 mt-6">
