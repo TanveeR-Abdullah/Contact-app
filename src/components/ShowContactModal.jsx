@@ -2,7 +2,7 @@ import { useState } from "react";
 import EditContactModal from "./EditContactModal";
 import DeleteConfirm from "./DeleteConfirm";
 
-const ShowContactModal = ({ contact, onClose, onEdit, onDelete }) => {
+const ShowContactModal = ({ contact, onClose }) => {
 
   const [edit, setEdit] = useState(false);
   const [del, setDel] = useState(false);
