@@ -8,15 +8,11 @@ const AddContact = () => {
     firstName: "", lastName: "", email: "", phone: "", address: ""
   });
 
-  // const handleSubmit = async () => {
-  //   await addContact({ ...data, createdAt: new Date() });
-  //   navigate("/");
-  // };
-  const handleSubmit = async (data) => {
-  const res = await addContact(data);
-  setContacts((prev) => [...prev, res.data]);
-};
-
+  const handleSubmit = async () => {
+    await addContact({ ...data, createdAt: new Date() });
+    navigate("/");
+  };
+  
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
