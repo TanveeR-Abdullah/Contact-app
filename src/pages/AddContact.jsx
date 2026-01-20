@@ -8,10 +8,11 @@ const AddContact = () => {
     firstName: "", lastName: "", email: "", phone: "", address: ""
   });
 
-  const handleSubmit = async () => {
-    await addContact({ ...data, createdAt: new Date() });
-    navigate("/");
-  };
+const handleSubmit = async () => {
+  await addContact({ ...data, createdAt: new Date() });
+  fetchContacts(); 
+  navigate("/");
+};
 
   return (
     <>
