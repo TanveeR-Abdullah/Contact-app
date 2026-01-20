@@ -1,8 +1,12 @@
 import { useState } from "react";
+import EditContactModal from "./EditContactModal";
+import DeleteConfirm from "./DeleteConfirm";
 
 const ShowContactModal = ({ contact, onClose, onEdit, onDelete }) => {
 
   const [edit, setEdit] = useState(false);
+  const [del, setDel] = useState(false);
+
   return (
 
     <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
@@ -19,20 +23,33 @@ const ShowContactModal = ({ contact, onClose, onEdit, onDelete }) => {
         </div>
 
         <div className="flex justify-center gap-4 mt-6">
-          
+
           <button
             onClick={() => setEdit(true)}
             className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
           >
             Edit
           </button>
+          {edit && (
+            <EditContactModal
+              contact={contact}
+              onClose={() => setEdit(false)}
+            />
+          )}
+
 
           <button
-            onClick={onDelete}
+            onClick={() => setDel(true)}
             className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
           >
             Delete
           </button>
+          {del && (
+            <DeleteConfirm
+              contactId={contact.id}
+              onClose={() => setDel(false)}
+            />
+          )}
 
           <button
             onClick={onClose}
@@ -40,9 +57,14 @@ const ShowContactModal = ({ contact, onClose, onEdit, onDelete }) => {
           >
             Close
           </button>
+
+
+
+
         </div>
       </div>
     </div>
+
 
   );
 };

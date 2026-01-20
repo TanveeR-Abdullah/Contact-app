@@ -5,11 +5,17 @@ import { ContactContext } from "../context/ContactContext";
 const DeleteConfirm = ({ contactId, onClose }) => {
   const { fetchContacts } = useContext(ContactContext);
 
+
   const handleDelete = async () => {
-    await deleteContact(contactId);
-    fetchContacts();
-    onClose();
-  };
+  if (!contactId) {
+    console.error("Missing contactId");
+    return;
+  }
+
+  await deleteContact(contactId);
+  fetchContacts();
+  onClose();
+};
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">

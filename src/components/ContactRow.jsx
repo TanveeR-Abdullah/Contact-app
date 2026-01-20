@@ -7,7 +7,7 @@ const ContactRow = ({ contact, index }) => {
   const [show, setShow] = useState(false);
   const [edit, setEdit] = useState(false);
   const [del, setDel] = useState(false);
-  
+
 
   return (
     <>
@@ -33,28 +33,28 @@ const ContactRow = ({ contact, index }) => {
         </td>
 
         <td className="px-4 gap-2.5 flex py-3">
-          
-            <button
-              onClick={() => setShow(true)}
-              className="text-blue-600 hover:text-blue-800"
-            >
-              👁
-            </button>
 
-            <button
-              onClick={() => setEdit(true)}
-              className="text-green-600 hover:text-green-800"
-            >
-              ✏
-            </button>
+          <button
+            onClick={() => setShow(true)}
+            className="text-blue-600 hover:text-blue-800"
+          >
+            👁
+          </button>
 
-            <button
-              onClick={() => setDel(true)}
-              className="text-red-600 hover:text-red-800"
-            >
-              ❌
-            </button>
-          
+          <button
+            onClick={() => setEdit(true)}
+            className="text-green-600 hover:text-green-800"
+          >
+            ✏
+          </button>
+
+          <button
+            onClick={() => setDel(true)}
+            className="text-red-600 hover:text-red-800"
+          >
+            ❌
+          </button>
+
         </td>
       </tr>
 
@@ -74,7 +74,7 @@ const ContactRow = ({ contact, index }) => {
 
       {del && (
         <DeleteConfirm
-          contact={contact}
+          contactId={contact.id}
           onClose={() => setDel(false)}
         />
       )}
