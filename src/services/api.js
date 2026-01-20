@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://contact-json-server-rd83.onrender.com/",
 });
 
 export const getContacts = () => API.get("/contacts");
